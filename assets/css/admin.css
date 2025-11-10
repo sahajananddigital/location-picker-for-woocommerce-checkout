@@ -1,0 +1,26 @@
+/**
+ * Location Picker for WooCommerce Checkout - Admin Styles
+ */
+
+.lpwc-settings-page {
+	max-width: 800px;
+}
+
+.lpwc-settings-page .form-table th {
+	width: 200px;
+}
+
+.lpwc-settings-page .form-table td input[type="text"] {
+	width: 100%;
+	max-width: 500px;
+}
+
+.lpwc-settings-page .description ul {
+	margin: 0.5em 0;
+	padding-left: 1.5em;
+}
+
+.lpwc-settings-page .description li {
+	margin: 0.25em 0;
+}
+
