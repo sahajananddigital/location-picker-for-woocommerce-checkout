@@ -8,11 +8,38 @@
 
 .lpwc-settings-page .form-table th {
 	width: 200px;
+	vertical-align: top;
+	padding-top: 20px;
 }
 
 .lpwc-settings-page .form-table td input[type="text"] {
 	width: 100%;
 	max-width: 500px;
+}
+
+.lpwc-settings-page .form-table td select.lpwc-multi-select {
+	width: 100%;
+	max-width: 500px;
+	min-height: 200px;
+	padding: 5px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.lpwc-settings-page .form-table td select.lpwc-multi-select:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: 2px solid transparent;
+}
+
+.lpwc-settings-page .form-table td select.lpwc-multi-select option {
+	padding: 5px;
+}
+
+.lpwc-settings-page .form-table td select.lpwc-multi-select option:checked {
+	background: #2271b1 linear-gradient(0deg, #2271b1 0%, #2271b1 100%);
+	color: #fff;
 }
 
 .lpwc-settings-page .description ul {
@@ -22,5 +49,10 @@
 
 .lpwc-settings-page .description li {
 	margin: 0.25em 0;
+}
+
+.lpwc-settings-page .lpwc-select-all-countries,
+.lpwc-settings-page .lpwc-deselect-all-countries {
+	margin-right: 5px;
 }
 

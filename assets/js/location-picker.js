@@ -209,10 +209,23 @@
 			return;
 		}
 
-		autocomplete = new google.maps.places.Autocomplete(searchInput, {
+		// Get restricted countries from integration data or fallback.
+		const integrationData = window.wc?.['location-picker-woocommerce'] || {};
+		const restrictedCountries = integrationData.restrictedCountries || lpwcData?.restrictedCountries || [];
+
+		// Configure autocomplete options.
+		const autocompleteOptions = {
 			types: ['address'],
-			componentRestrictions: { country: [] }, // Allow all countries, can be restricted via settings.
-		});
+		};
+
+		// Apply country restrictions if any are set.
+		if (restrictedCountries && restrictedCountries.length > 0) {
+			autocompleteOptions.componentRestrictions = {
+				country: restrictedCountries,
+			};
+		}
+
+		autocomplete = new google.maps.places.Autocomplete(searchInput, autocompleteOptions);
 
 		// When place is selected, update map and fill form.
 		autocomplete.addListener('place_changed', function() {

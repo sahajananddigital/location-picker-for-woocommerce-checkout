@@ -144,12 +144,16 @@ class Location_Picker_WooCommerce {
 			LPWC_VERSION
 		);
 
+		// Get restricted countries.
+		$restricted_countries = get_option( 'lpwc_restricted_countries', array() );
+
 		// Localize script with data.
 		wp_localize_script(
 			'lpwc-location-picker',
 			'lpwcData',
 			array(
 				'apiKey' => $api_key,
+				'restrictedCountries' => ! empty( $restricted_countries ) ? $restricted_countries : array(),
 				'defaultZoom' => 15,
 				'defaultCenter' => array(
 					'lat' => 0,
@@ -173,6 +177,9 @@ class Location_Picker_WooCommerce {
 			array(),
 			LPWC_VERSION
 		);
+
+		// jQuery is already included in WordPress admin, but ensure it's loaded.
+		wp_enqueue_script( 'jquery' );
 	}
 
 	/**
@@ -210,6 +217,9 @@ class Location_Picker_WooCommerce {
 		// Set default options.
 		if ( ! get_option( 'lpwc_google_maps_api_key' ) ) {
 			add_option( 'lpwc_google_maps_api_key', '' );
+		}
+		if ( ! get_option( 'lpwc_restricted_countries' ) ) {
+			add_option( 'lpwc_restricted_countries', array() );
 		}
 	}
 

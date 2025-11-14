@@ -55,8 +55,11 @@ class LPWC_Checkout_Block_Integration implements IntegrationInterface {
 	 * @return array
 	 */
 	public function get_script_data() {
+		$restricted_countries = get_option( 'lpwc_restricted_countries', array() );
+		
 		return array(
 			'apiKey' => get_option( 'lpwc_google_maps_api_key', '' ),
+			'restrictedCountries' => ! empty( $restricted_countries ) ? $restricted_countries : array(),
 			'defaultCenter' => array(
 				'lat' => 0,
 				'lng' => 0,
