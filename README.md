@@ -27,7 +27,7 @@ A WooCommerce addon that adds a Google Maps location picker to the WooCommerce b
 1. Download or clone this repository into your WordPress plugins directory:
    ```bash
    cd wp-content/plugins
-   git clone https://github.com/yourusername/location-picker-for-woocommerce-checkout.git
+   git clone https://github.com/sahajananddigital/location-picker-for-woocommerce-checkout.git
    ```
 
 2. Activate the plugin through the 'Plugins' menu in WordPress.
@@ -128,7 +128,7 @@ location-picker-for-woocommerce-checkout/
 
 ## Support
 
-For issues, feature requests, or contributions, please visit the [GitHub repository](https://github.com/yourusername/location-picker-for-woocommerce-checkout).
+For issues, feature requests, or contributions, please visit the [GitHub repository](https://github.com/sahajananddigital/location-picker-for-woocommerce-checkout).
 
 ## License
 

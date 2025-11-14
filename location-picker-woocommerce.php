@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Location Picker for WooCommerce Checkout
- * Plugin URI: https://github.com/yourusername/location-picker-for-woocommerce-checkout
+ * Plugin URI: https://github.com/sahajananddigital/location-picker-for-woocommerce-checkout
  * Description: Add Google Maps location picker to WooCommerce block checkout that automatically fills address fields.
  * Version: 1.0.0
- * Author: Your Name
- * Author URI: https://yourwebsite.com
+ * Author: Sahajanand Digital
+ * Author URI: https://sahajananddigital.in
  * Text Domain: location-picker-woocommerce
  * Domain Path: /languages
  * Requires at least: 5.8
